@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Website</title>
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css">
+        /* banner  */
+        .banner{
+            width: 100%; 
+            min-height: 70vh;
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url(img/habout.jpg);
+            background-position: center; 
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        .navbar{
+            overflow: hidden;
+            background-color: #f2f1ee;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            justify-content: space-between;
+        }
+        .navbar-right{
+            float: right;
+        }
+        .navbar ul li{
+            list-style: none;
+            display: inline-block;
+        }
+        .navbar ul li a{
+            list-style: none;
+            display: inline-block;
+            /* display: flex; */
+            color: #333;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font: 17px;
+        }
+        .navbar a:hover{
+            background-color: #cd0046;
+            color: #333;
+        }
+        .logo{
+            width: 130px;
+            padding-bottom: 5px;
+            padding-top: 5px;
+            cursor: pointer;
+            display: inline;
+        }
+        .home-heading{
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #f2f1ee;
+            text-align: center;
+        }
+        .home-heading h1{
+            font-size: 40px;
+            margin-bottom: 1%;
+        }
+        .button{
+            display: inline-block;
+            text-decoration: none;
+            padding: 12px 34px;
+            font-size: 13px;
+            position: relative;
+            text-align: center;
+            border-radius: 25px;
+            font-weight: bold;
+            border: 2px solid #f2f1ee;
+            background: transparent;
+            color: #f2f1ee;
+            cursor: pointer;
+            margin-top: 2%;
+        }
+        .button:hover{
+            background-color: #cd0046;
+            border: 2px solid #cd0046;
+        }
+
+        /* mission  */
+        /* for whatever reason the mission h1 keeps going sideways */
+        .mission{
+            background-color: #fff;
+            padding: 0;
+            display: inline;
+            margin-top: 20%;
+            align-items: center;
+        }
+        .mission h1{
+            text-align: center;
+            margin-top: 5%;
+            margin-bottom: 4%;
+        }
+        .mission-section p{
+            margin: 2%;
+            text-align: justify;
+            line-height: 1.6;
+        }
+        .mis2{
+            margin: 5%;
+            padding: 20px;
+            border-radius: 15px;
+        }
+        .mission-img{
+            height: 100%;
+            max-width: 100%;
+            float: left;
+            margin-left: 8%;
+            margin-right: 3%;
+            border-radius: 15px;
+        }
+
+        /* values  */
+        .values{
+            margin-bottom: 10%;
+            margin-top: 10%;
+        }
+        h1{
+            text-align: center;
+            margin-top: 5%;
+        }
+        .values .row{
+            display: flex;
+            justify-content: space-between;
+            line-height: 1.8;
+            margin: 5%;
+        }
+        .val-col ul li{
+            font-size: 14px;
+            text-align: left;
+        }
+        .val-col{
+            flex-basis: 31%;
+            background: #f2f1ee;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            padding: 20px 12px;
+            box-sizing: border-box;
+        }
+        .val-col h3{
+            text-align: center;
+            font-weight: 600;
+            margin:10px 0;
+        }
+        .val-col:hover{
+            box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+        }
+
+        /* call to action  */
+        .action-call{
+            color: #fafafa;
+            width: 100%;
+            background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(img/cta.jpg);
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        /* footer  */
+        .foot .row{
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 2%;
+            display: flex;
+            justify-content: space-between;
+            line-height: 1;
+            margin-bottom: 2%;
+        }
+        .footer{
+            text-align: right;
+        }
+        .foot h4{
+            text-align: center;
+            margin-bottom: 2%;
+            margin-top: 2%;
+            font-weight: 600;
+        }
+
+        @media(max-width: 900px){
+            .mission-section p{
+                font-size: 15px;
+                padding-left: 3%;
+            }
+            .mis2{
+                margin-top: -5%;
+            }
+            .mission-img{
+                margin: 0;
+                height: 100%;
+                max-width: 100%;
+                padding: 2%;
+                border-radius: 25px;
+            }
+            .row{
+                flex-direction: column;
+            }
+            h1{
+                margin-top: 5%;
+            }
+            .action-call h1{
+                font-size: 20px;
+            }
+            .imgEvents{
+                max-height: 300px;
+                margin-bottom: 2%;
+            } 
+            .foot{
+                font-size: 12px;
+                padding: 2%;
+            }
+            .mission{
+                font-size: 15px;
+                display: flex;
+            }
+            .home-heading p{
+                padding-left: 2%;
+                padding-right: 2%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- banner  -->
+    <div class="banner">
+        <div class="navbar">
+            <div class="logo">
+                <img src="img/logo.jpg" class="logo">             
+            </div>
+            <div class="navbar-right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>                
+            </div>
+        </div>
+        <div class="home-heading">
+            <h1>ABOUT MMP</h1>
+            <p>We encourage greater appreciation and understanding of different artistic perspectives
+            </p>
+            <div>
+                <a href="contact.html" class="button">Get Involved</a>
+            </div>
+        </div>
+    </div>
+    <!-- mission  --> 
+    <h1>Our Mission</h1>
+    <div class="mission">
+        <div class="mis2">
+            <img src="img/mission.jpg" class="mission-img">
+            <div class="mission-section">
+                <p>The Muse Movement Project focuses on revolutionizing the way individuals engage with artistic expression.
+                    We believe in fostering immersive experiences that transcend traditional boundaries, inviting people to 
+                    not merely observe but actively participate in the creation and appreciation of art. By embracing 
+                    innovative technologies, interactive installations, and community-driven initiatives, our aim is to 
+                    democratize access to art and cultivate a culture where everyone can find meaning, inspiration, and 
+                    personal connection through creative exploration. Our mission is to challenge preconceived notions 
+                    of what art can be and ignite a transformative shift in how people perceive, interact with, and 
+                    ultimately integrate art into their lives</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- values  -->
+    <div class="values">
+        <h1>Our Values</h1>
+        <div class="row">
+            <div class="val-col">
+                <h3>Creativity</h3>
+                <p>Encouraging and celebrating artistic expression in all its forms. Fostering an environment where 
+                    creativity can flourish.Embracing innovation and experimentation in artistic practice</p>
+            </div>
+            <div class="val-col">
+                <h3>Inclusivity</h3>
+                <p>Honoring diverse cultural perspectives and histories.
+                    Promoting intercultural dialogue and understanding.
+                    Cultivating a sense of belonging and connection.
+                    </p>
+            </div>
+            <div class="val-col">
+                <h3>Empowerment</h3>
+                <p>Promoting self-expression, social change, and advocacy.
+                    Fostering agency and resilience through creative endeavors.
+                    Empowered to explore their artistic potential.
+                    </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- call to action  -->
+    <div class="action-call">
+        <h1>Join us in fostering creativity, community, 
+            and cultural enrichment <br/>through the power of art</h1>
+        <a class="button" href="contact.html">CONTACT US</a>
+    </div>
+    <!-- footer  -->
+        <div class="foot">
+            <h4>About Us</h4>
+            <div class="row">
+                <div class="footer" >
+                    <p ALIGN="left">2024 Muse Movement Project, Inc. | Privacy Policy | Sitemap.<br><br>We are committed to 
+                        reintroducing art into the fabric society<br><br>Join if you think art is important</p>
+                </div>
+                <div class="footer">
+                    <p ALIGN="left"> Muse Movement Project is available to all, without regard<br><br>
+                        111 Winterworld Street, Suite 400 | Boston, MA 02111</p>
+                </div>
+            </div>
+            <h4>&copy; MUSE MOVEMENT PROJECT</h4>
+    </div>
+</body>
+</html>

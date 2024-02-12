@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Website</title>
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css">
+        /* banner  */
+        .banner{
+            width: 100%; 
+            min-height: 100vh;
+            background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),url(img/hbanner.jpg);
+            background-position: center; 
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            margin-bottom: 10%;
+        }
+        .navbar{
+            overflow: hidden;
+            background-color: #f2f1ee;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            justify-content: space-between;
+        }
+        .navbar-right{
+            float: right;
+        }
+        .navbar ul li{
+            list-style: none;
+            display: inline-block;
+        }
+        .navbar ul li a{
+            list-style: none;
+            display: inline-block;
+            /* display: flex; */
+            color: #333;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font: 17px;
+        }
+        .navbar a:hover{
+            background-color: #cd0046;
+            color: #333;
+        }
+        .logo{
+            width: 130px;
+            padding-bottom: 5px;
+            padding-top: 5px;
+            cursor: pointer;
+            display: inline;
+        }
+        .home-heading{
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #f2f1ee;
+            text-align: center;
+        }
+        .home-heading h1{
+            font-size: 40px;
+            margin-bottom: 1.5%;
+        }
+        .button{
+            display: inline-block;
+            text-decoration: none;
+
+            padding: 12px 34px;
+            font-size: 13px;
+            position: relative;
+            text-align: center;
+            border-radius: 25px;
+            font-weight: bold;
+            border: 2px solid #f2f1ee;
+            background: transparent;
+            color: #f2f1ee;
+            cursor: pointer;
+            margin-top: 4%;
+        }
+        .button:hover{
+            background-color: #cd0046;
+            border: 2px solid #cd0046;
+        }
+
+        /* first section  */
+        .first-section{
+            display: inline;
+            margin-top: 20%;
+            align-items: center;
+            background-color: #ffff;
+        }
+        .first-section p{
+            margin: 2%;
+            text-align: justify;
+            line-height: 1.6;
+        }
+        .first-section h1{
+            margin-bottom: 4%;
+            line-height: 1.3;
+        }
+        .hInteract{
+            margin: 5%;
+            padding: 20px;
+            border-radius: 15px;
+        }
+        .imgInteract{
+            height: 100%;
+            max-width: 100%;
+            float: left;
+            margin-left: 8%;
+            margin-right: 3%;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            border-radius: 15px;
+        }
+
+        /* recent event section  */
+        .recent-events{
+            margin: 0;
+            text-align: center;
+            padding-top: 40px;
+            margin-top: 15%;
+            padding-bottom: 10%;
+            background-color: #fafafa;
+        }
+        .recent-events h1{
+            font-size: 35px;
+            font-weight: 600;
+            margin-bottom: 5%;
+        }
+        .recent-events .row{
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-top: 2%;
+            display: flex;
+            justify-content: space-between;
+            line-height: 1.8;
+        }
+        .recent-col p{
+            font-size: 14px;
+        }
+        .recent-col{
+            width: auto;
+            background: #f2f1ee;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            padding: 20px 12px;
+            box-sizing: border-box;
+        }
+        .recent-col h3{
+            text-align: center;
+            font-weight: 600;
+            margin:10px 0;
+        }
+        .imgEvents{
+            border-radius: 15px;
+        }
+        .recent-col:hover{
+            box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+        }
+
+        /* call to action  */
+        .action-call{
+            color: #fafafa;
+            width: 100%;
+            background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(img/cta.jpg);
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        /* footer  */
+        .foot .row{
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 2%;
+            display: flex;
+            justify-content: space-between;
+            line-height: 1;
+            margin-bottom: 2%;
+        }
+        .footer{
+            text-align: right;
+        }
+        .foot h4{
+            text-align: center;
+            margin-bottom: 2%;
+            margin-top: 2%;
+            font-weight: 600;
+        }
+        @media(max-width: 1350px){
+            .first-section p{
+                font-size: 15px;
+                margin-left: 3%;
+            }
+            .first-section h1{
+                margin-top: 5%;
+                margin-left: 3%;
+                padding: 0;
+            }
+            .recent-events h1{
+                font-size: 20px;
+            }
+            .imgInteract{
+                margin: 0;
+                padding: 2%;
+                max-width: 95%;
+                height: auto;
+            }
+            .row{
+                flex-direction: column;
+            }
+            .action-call h1{
+                font-size: 20px;
+            }
+            .imgEvents{
+                max-height: 300px;
+                margin-bottom: 2%;
+            }
+            .foot{
+                font-size: 15px;
+                padding: 2%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- banner  -->
+    <div class="banner">
+        <div class="navbar">
+            <div class="logo">
+                <img src="img/logo.jpg" class="logo">             
+            </div>
+            <div class="navbar-right">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>                
+            </div>
+        </div>
+        <div class="home-heading">
+            <h1>THE MUSE MOVEMENT <br/> PROJECT</h1>
+            <p>We believe that integrating 
+                art into society is vital for fostering creativity, 
+                empathy, and cultural <br/>understanding among individuals of all backgrounds
+            </p>
+            <div>
+                <a href="about.html" class="button">Learn More</a>
+            </div>
+        </div>
+    </div>
+    <!-- section about changing art  -->
+    <div class="first-section">
+        <img src="img/intereactPic.jpg" alt="People discussing" class="imgInteract">
+        <div class="hInteract">
+            <h1>Changing The Way Society Interacts with Art</h1>
+            <p>The Muse Movement Project aims to transfer the way art is interacted with. In doing so, we hope to 
+                democratize access to creative
+                 expression, ensuring that everyone has the opportunity to participate in 
+                 and benefit from the rich tapestry of human artistic endeavor. By breaking
+                  down traditional barriers and facilitating active engagement with artistic 
+                  expression, we empower individuals from all walks of life to explore their 
+                  creativity and share their unique perspectives.
+            </p>
+        </div>
+    </div>
+    <!-- recent events  -->
+    <div class="recent-events">
+        <h1>What We Do</h1>
+        <div class="row">
+            <div class="recent-col">
+                <h3>Community Art Program</h3>
+                <img src="img/painting.jpg" alt="Woman paiting" class="imgEvents">
+                <p>
+                    Organizing and facilitating art workshops, classes, and events for community members of all ages
+                     and backgrounds to foster creativity and skill development.
+                </p>
+            </div>
+            <div class="recent-col">
+                <h3>Public Art Installation</h3>
+                <img src="img/install.jpg" alt="Woman paiting" class="imgEvents">
+                <p>
+                    Commissioning and curating public art installations in urban spaces, parks, and community centers to 
+                    enhance the aesthetic appeal of neighborhoods and promote cultural vibrancy.
+                </p>
+            </div>
+            <div class="recent-col">
+                <h3>Open Art Exhibition</h3>
+                <img src="img/gallery.jpg" alt="Gallery" class="imgEvents">
+                <br>Hosting regular art exhibitions and galleries featuring local, emerging, and underrepresented artists to 
+                showcase their work and provide a platform for artistic expression. 
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- call to action  -->
+    <div class="action-call">
+        <h1>Join us in fostering creativity, community, 
+            and cultural enrichment <br/>through the power of art</h1>
+        <a class="button" href="#">CONTACT US</a>
+    </div>
+    <!-- footer  -->
+    <div class="foot">
+        <h4>About Us</h4>
+        <div class="row">
+            <div class="footer" >
+                <p ALIGN="left">2024 Muse Movement Project, Inc. | Privacy Policy | Sitemap.<br><br>We are committed to 
+                    reintroducing art into the fabric society<br><br>Join if you think art is important</p>
+            </div>
+            <div class="footer">
+                <p ALIGN="left"> Muse Movement Project is available to all, without regard<br><br>
+                    111 Winterworld Street, Suite 400 | Boston, MA 02111</p>
+            </div>
+        </div>
+        <h4>&copy; MUSE MOVEMENT PROJECT</h4>
+    </div>
+</body>
+</html>

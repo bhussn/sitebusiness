@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Website</title>
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css">
+        /* banner  */
+        .banner{
+            width: 100%; 
+            min-height: 70vh;
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url(img/hcontact.jpg);
+            background-position: center; 
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            margin-bottom: 5%;
+        }
+        .navbar{
+            overflow: hidden;
+            background-color: #f2f1ee;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            justify-content: space-between;
+        }
+        .navbar-right{
+            float: right;
+        }
+        .navbar ul li{
+            list-style: none;
+            display: inline-block;
+        }
+        .navbar ul li a{
+            list-style: none;
+            display: inline-block;
+            /* display: flex; */
+            color: #333;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font: 17px;
+        }
+        .navbar a:hover{
+            background-color: #cd0046;
+            color: #333;
+        }
+        .logo{
+            width: 130px;
+            padding-bottom: 5px;
+            padding-top: 5px;
+            cursor: pointer;
+            display: inline;
+        }
+        .home-heading{
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #f2f1ee;
+            text-align: center;
+        }
+        .home-heading h1{
+            font-size: 40px;
+            margin-bottom: 1%;
+        }
+        .button{
+            display: inline-block;
+            text-decoration: none;
+            padding: 12px 34px;
+            font-size: 13px;
+            position: relative;
+            text-align: center;
+            border-radius: 25px;
+            font-weight: bold;
+            border: 2px solid #f2f1ee;
+            background: transparent;
+            color: #f2f1ee;
+            cursor: pointer;
+            margin-top: 2%;
+        }
+        .button:hover{
+            background-color: #cd0046;
+            border: 2px solid #cd0046;
+        }
+        
+        /* form  */
+        .form-text h1{
+            text-align: center;
+        }
+        .form-text h2{
+            text-align: center;
+            margin: 2% 2%;
+        }
+        .form-text ul li{
+            text-align: center;
+            list-style-type: square;
+        }
+        .form-text{
+            margin-bottom: 2%;
+        }
+        .form h1{
+            text-align: center;
+        }
+        .form{
+            margin: auto;
+            width: 80%;
+            text-align: left;
+            border-style: solid;
+            border-width: 2px;
+            padding: 20px 20px;
+            margin-bottom: 5%;
+        }
+        #message-box{
+            width: 100%;
+            height: 140px;
+        }
+        #box{
+            width: 100%;
+        }
+        /* footer  */
+        .foot{
+            background-color: #fafafa;
+        }
+        .foot .row{
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 2%;
+            display: flex;
+            justify-content: space-between;
+            line-height: 1;
+            margin-bottom: 2%;
+        }
+        .footer{
+            text-align: right;
+        }
+        .foot h4{
+            padding-top: 2%;
+            text-align: center;
+            margin-bottom: 2%;
+            margin-top: 2%;
+            font-weight: 600;
+        }
+        @media(max-width:900px){
+        .form{
+            margin: auto;
+            max-width: 95%;
+            text-align: left;
+            border-style: solid;
+            border-width: 1px;
+            padding: 20px 20px;
+            margin-bottom: 2.5%;
+        }
+        .foot{
+            font-size: 10px;
+            padding: 2%;
+        }
+        .mission{
+            font-size: 15px;
+            display: flex;
+        }
+        }
+    </style>
+</head>
+<body>
+    <!-- banner  -->
+    <div class="banner">
+        <div class="navbar">
+            <div class="logo">
+                <img src="img/logo.jpg" class="logo">             
+            </div>
+            <div class="navbar-right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>                
+            </div>
+        </div>
+        <div class="home-heading">
+            <h1>GET INVOLVED TODAY</h1>
+        </div>
+    </div>
+    <!-- form  -->
+    <div class="form-text">
+        <h1>Get Involved</h1>
+        <h2>Join us in promoting</h2>
+        <ul>
+            <li>Empathy</li>
+            <li>Critical Thinking</li>
+            <li>Cultural Enrichment</li>
+        </ul>
+    </div>
+    <div class="form">
+        <h1>Form</h1>
+        <br>
+        <form method="get" action="#">
+            <label>Name:</label>
+            <br>
+            <input type="text" placeholder="Enter your name here" id="box"/>
+            <br>
+            <br>
+            <label>Email:</label>
+            <br>
+            <input type="text" placeholder="Enter your email here" id="box"/>
+            <br>
+            <br>
+            <label>Phone Number:</label>
+            <br>
+            <input type="text" placeholder="Enter your phone number here" id="box"/>
+            <br>
+            <br>
+            <label>Message:</label>
+            <br>
+            <input type="text" placeholder="Enter your message here" id="message-box"/>
+            <br>
+            <br>
+            <label>Date:</label>
+            <br>
+            <input type="date" placeholder="Enter your message here" id="box"/>
+            <br>
+            <br>
+            <input type="submit" value="Submit"/>
+        </form>
+    </div>
+    <!-- footer  -->
+    <div class="foot">
+        <h4>About Us</h4>
+        <div class="row">
+            <div class="footer" >
+                <p ALIGN="left">2024 Muse Movement Project, Inc. | Privacy Policy | Sitemap.<br><br>We are committed to 
+                    reintroducing art into the fabric society<br><br>Join if you think art is important</p>
+            </div>
+            <div class="footer">
+                <p ALIGN="left"> Muse Movement Project is available to all, without regard<br><br>
+                    111 Winterworld Street, Suite 400 | Boston, MA 02111</p>
+            </div>
+        </div>
+        <h4>&copy; MUSE MOVEMENT PROJECT</h4>
+    </div>
+</body>
+</html>
